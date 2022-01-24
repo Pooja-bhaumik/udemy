@@ -1,0 +1,27 @@
+.top-inputs{
+    display: flex;
+    margin-bottom:1rem;
+}
+.inputWrapper{
+    width: 50%;
+}
+.inputWrapper label{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #100808;
+    padding-bottom: 5px;
+}
+.inputWrapper input{
+    padding: 6px;
+    border-radius: 8px;
+    /* box-shadow: none; */
+    border: none;
+    width: 84%;
+}
+.bottom-input .inputWrapper{
+    width: 50%;
+}
+.add-btn{
+    display: flex;
+}

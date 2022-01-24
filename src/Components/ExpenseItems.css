@@ -24,3 +24,16 @@
     display: flex;
     align-items: center;
 }
+.change-btn{
+    display: flex;
+    align-items: center;
+}
+.change-btn button{
+    background: #202954;
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 13px;
+    margin-bottom: 16px;
+}

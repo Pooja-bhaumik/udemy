@@ -1,9 +1,9 @@
 .ExpenseItem-main{
     background: #6172c5b0;
-    border-radius: 50px;
+    border-radius: 16px;
     box-shadow: 0 3px 9px 0 rgb(122 122 122 / 20%);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 .amount h6{
@@ -13,6 +13,9 @@
     border-radius: 10px;
     border: 1px solid;
     font-size: 13px;
+}
+.amount{
+    margin-right: 10px;
 }
 
 .description h4{

@@ -1,19 +1,26 @@
-import React from 'react'
-import ExpenseItems from './ExpenseItems'
-import './Expenses.css'
+import React, { useState } from "react";
+import ExpensesList from "./ExpensesList";
+import ExpenseFilter from "./ExpenseFilter";
+import ExpensesChart from "./ExpensesChart";
+import "./Expenses.css";
 const Expenses = (props) => {
-    return (
-        <div className='expenses'>
-            <ExpenseItems title={props.items[0].title}
-                amount={props.items[0].amount}
-                date={props.items[0].date} />
-            <ExpenseItems title={props.items[1].title}
-                amount={props.items[1].amount}
-                date={props.items[1].date} />
-            <ExpenseItems title={props.items[2].title}
-                amount={props.items[2].amount}
-                date={props.items[2].date} />
-        </div>
-    )
-}
-export default Expenses
+  const [filteredYear, setFilteredYear] = useState("2020");
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+  const filteredExpense = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
+ 
+  return (
+    <div className="expenses">
+      <ExpenseFilter
+        selected={filteredYear}
+        onChangeFilter={filterChangeHandler}
+      />
+      <ExpensesChart expenses = {filteredExpense}/>
+     <ExpensesList items = {filteredExpense}/>
+    </div>
+  );
+};
+export default Expenses;
